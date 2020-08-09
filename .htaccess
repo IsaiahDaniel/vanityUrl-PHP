@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .* - [L]
+RewriteRule ^(.*) http://localhost/vanityURL/profile.php/?u=$1 [NC]
+
